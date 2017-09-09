@@ -8,11 +8,6 @@ import * as CounterActions from '../actions/counter'
 
 class Counter extends Component {
 
-    static PropTypes = {
-        value: PropTypes.number.isRequired,
-        actions: PropTypes.object.isRequired
-    }
-
     render() {
         const { value, actions } = this.props;
         return (
@@ -22,6 +17,11 @@ class Counter extends Component {
             </div>
         );
     }
+}
+
+Counter.propTypes = {
+    value: PropTypes.number.isRequired,
+    actions: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {
